@@ -29,3 +29,9 @@ uninitialized constant Movie
 Could not find table 'movies'
 expected to find text "Iron Man"
 
+rake db:migrate
+rake db:schema:load RAILS_ENV=test
+
+expected to find text "PG-13"
+
+

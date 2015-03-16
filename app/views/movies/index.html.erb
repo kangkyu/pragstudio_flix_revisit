@@ -3,7 +3,13 @@
 <ul>
 
 <% @movies.each do |movie| %>
-  <li><%= movie.title %></li>
+  <li>
+    <%= movie.title %>
+    <%= movie.rating %>
+    <%= movie.total_gross %>
+    <%= movie.description %>
+    <%= movie.released_on %>
+  </li>
 <% end %>
 
 </ul>
