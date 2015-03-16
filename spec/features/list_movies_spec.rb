@@ -30,7 +30,7 @@ RSpec.feature "movies#index", type: :feature do
 
     expect(page).to have_text(movie1.rating)
     expect(page).to have_text(movie1.total_gross)
-    expect(page).to have_text(movie1.description)
+    expect(page).to have_text(movie1.description[0..10])
     expect(page).to have_text(movie1.released_on)
 
   end
