@@ -9,6 +9,7 @@ rails generate rspec:install
 bundle exec rspec
 "just as a quick sanity check"
 
+###1
 No route matches [GET] "/movies"
 uninitialized constant MoviesController
 The action 'index' could not be found for MoviesController
@@ -23,4 +24,8 @@ expected to find text "Movie 1" in "3 Movies"
 app.movies_url
 => "http://www.example.com/movies"
 
+###2
+uninitialized constant Movie
+Could not find table 'movies'
+expected to find text "Iron Man"
 
