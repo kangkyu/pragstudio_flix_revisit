@@ -45,3 +45,6 @@ undefined method `title' for nil:NilClass
 
 undefined method `movie_url'
 rspec --format doc
+
+###4
+Unable to find link "All Movies"

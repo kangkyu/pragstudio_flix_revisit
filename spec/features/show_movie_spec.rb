@@ -2,11 +2,7 @@ require 'rails_helper'
 
 describe 'movies#show' do
   it "shows movie details" do
-    movie = Movie.create(title: "Superman",
-                        rating: "PG",
-                        total_gross: 134218018.00,
-                        description: "Clark Kent grows up to be the greatest super-hero",
-                        released_on: "1978-12-15")
+    movie = Movie.create(movie_attributes)
 
     visit movie_url(movie)
 
