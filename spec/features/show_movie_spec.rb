@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'movies#show' do
-  it "show movie details" do
+  it "shows movie details" do
     movie = Movie.create(title: "Superman",
                         rating: "PG",
                         total_gross: 134218018.00,
