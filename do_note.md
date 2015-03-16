@@ -1,0 +1,1 @@
+rails new pragstudio_flix --skip-test-unit
