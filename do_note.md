@@ -20,3 +20,7 @@ Update the code example to also expect the page to include three movie titles: "
 
 expected to find text "Movie 1" in "3 Movies"
 
+app.movies_url
+=> "http://www.example.com/movies"
+
+
