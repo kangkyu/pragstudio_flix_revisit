@@ -35,3 +35,11 @@ rake db:schema:load RAILS_ENV=test
 expected to find text "PG-13"
 expected to find text "Tony Stark builds an armored suit to fight the throes of evil"
 expected to find text "$318,412,101.00" 
+
+###3
+No route matches [GET] "/movies/1"
+The action 'show' could not be found for MoviesController
+Missing template movies/show
+expected to find text "Superman"
+undefined method `title' for nil:NilClass
+
