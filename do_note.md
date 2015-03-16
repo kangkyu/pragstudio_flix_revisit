@@ -43,3 +43,4 @@ Missing template movies/show
 expected to find text "Superman"
 undefined method `title' for nil:NilClass
 
+undefined method `movie_url'
