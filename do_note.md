@@ -74,6 +74,12 @@ Unable to find link "Edit"
 undefined local variable or method `movie'
 undefined method `edit_movie_path'
 The action 'edit' could not be found for MoviesController
+Missing template movies/edit
+
+First argument in form cannot contain nil or be empty
+http://www.rubydoc.info/github/jnicklas/capybara/Capybara/Node/Finders:find_field
+Unable to find field "Title"
+
 
 
 
