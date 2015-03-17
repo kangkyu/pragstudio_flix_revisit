@@ -93,6 +93,17 @@ ActiveModel::ForbiddenAttributesError
 Unable to find link "Add New Movie"
 undefined local variable or method `new_movie_path'
 The action 'new' could not be found for MoviesController
+Missing template movies/new
+
+undefined local variable or method `movies'
+Unable to find field "Title"
+First argument in form cannot contain nil or be empty
+Unable to find field "Released On"
+No route matches [POST] "/movies"
+The action 'create' could not be found for MoviesController
+Missing template movies/create
+Cannot redirect to nil!
+undefined method `create' for nil:NilClass
 
 
 

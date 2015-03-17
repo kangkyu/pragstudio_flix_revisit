@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/movies/:id', to: 'movies#show', as: 'movie'
   patch 'movies/:id', to: 'movies#update'
   put 'movies/:id', to: 'movies#update'
+  post 'movies', to: 'movies#create'
 end
