@@ -81,10 +81,13 @@ First argument in form cannot contain nil or be empty
 http://www.rubydoc.info/github/jnicklas/capybara/Capybara/Node/Finders:find_field
 Unable to find field "Title" 
 
+No route matches [PATCH] "/movies/1"
+The action 'update' could not be found for MoviesController
+Missing template movies/update
 
-
-
-
+ActiveModel::ForbiddenAttributesError
+`redirect_to @movie`
+`redirect_to movie_url(@movie)`
 
 
 
