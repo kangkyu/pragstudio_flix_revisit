@@ -61,7 +61,12 @@ Failure/Error: expect(movie).to be_flop
 
 expected `#<Movie ...>.flop?` to return false, got true
 
+rake db:seed
+The ! version of create raises an exception if a record can't be created because it's invalid (more on that later).
 
+create a file named date_formats.rb in the config/initializers directory and copy/paste the following:
+
+Date::DATE_FORMATS[:default] = "%B %e, %Y"
 
 
 
