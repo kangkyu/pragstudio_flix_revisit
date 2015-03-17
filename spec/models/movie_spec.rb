@@ -7,7 +7,7 @@ RSpec.describe Movie, type: :model do
     expect(movie).to be_flop
   end
 
-  it "flop if the total gross exceeds $50M" do
+  it "not flop if the total gross exceeds $50M" do
     movie = Movie.new(total_gross: 50_000_001.00)
     expect(movie).to_not be_flop
   end
