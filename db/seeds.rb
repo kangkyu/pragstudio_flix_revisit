@@ -29,10 +29,17 @@ Movie.create!([
     released_on: "2002-05-03"
   },
   {
-    title: "What-Man",
-    rating: "PG",
-    total_gross: 40707366.00,
-    description: "What Man goes Super strong",
-    released_on: "1906-05-03"
+    title: "Batman vs. Godzilla",
+    rating: "PG-13",
+    total_gross: 387623910,
+    description: "The Caped Crusader battles the fire-breathing Gojira",
+    released_on: 10.days.from_now
+  },
+  {
+    title: "Catwoman",
+    rating: "PG-13",
+    total_gross: 40200000.00,
+    description: "Patience Philips has a more than respectable career as a graphic designer",
+    released_on: "2004-07-23"
   }
 ])
