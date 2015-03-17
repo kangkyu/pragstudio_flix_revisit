@@ -22,6 +22,6 @@ RSpec.feature "adding a movie", type: :feature do
 
     expect(current_path).to eq(movie_path(Movie.last))
     expect(page).to have_text("New Movie")
-
+    expect(page).to have_text("123 min")
   end
 end

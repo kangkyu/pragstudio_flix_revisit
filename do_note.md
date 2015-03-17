@@ -143,3 +143,5 @@ undefined method `cast' for #<Movie
 expected to find text "Robert Downey
 expected to find css "img[src$='ironman.jpg']" but there were no matches
 
+expected to find text "123 min" in "New Movie De
+
