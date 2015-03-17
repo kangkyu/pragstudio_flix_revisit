@@ -146,3 +146,9 @@ expected to find css "img[src$='ironman.jpg']" but there were no matches
 expected to find text "123 min" in "New Movie De
 
 Write a Custom Image Helper - image placeholder if no image_file_name
+
+
+###Layout
+<footer style="text-align: center; padding: 5px; color: #237CBE; background: #F0F0F0">
+<aside style="float: right; background: #F0F0F0; width: 200px;">
+<header style="padding: 5px; color: #F0F0F0; background: #237CBE;">
