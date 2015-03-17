@@ -124,8 +124,20 @@ http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html
 
 undefined method `released' for #<Class
 expected #<ActiveRecord::Relation []> to include #<Movie
+SQLite3::SQLException: no such column: created_at:
+expect(Movie.recently_added).to eq([movie2, movie3, movie4])
+Movie.released.to_sql
 
+###10 adds more fields to the movies database table
+    fill_in "Cast"
+    fill_in "Director"
+    fill_in "Duration"
+    fill_in "Image file name"
 
+cast director duration image_file_name
+have_selector
+expect(page).to have_selector("img[src$='#{movie.image_file_name}']")
 
+Unable to find field "Cast"
 
 
