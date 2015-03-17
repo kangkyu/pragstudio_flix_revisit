@@ -89,6 +89,10 @@ ActiveModel::ForbiddenAttributesError
 `redirect_to @movie`
 `redirect_to movie_url(@movie)`
 
+###7
+Unable to find link "Add New Movie"
+undefined local variable or method `new_movie_path'
+The action 'new' could not be found for MoviesController
 
 
 
