@@ -48,3 +48,32 @@ rspec --format doc
 
 ###4
 Unable to find link "All Movies"
+
+###5
+movies with a total gross less than $50M as flops
+spec/features/show_movie_spec.rb
+
+Failure/Error: movie = Movie.create(movie_attributes(total_gross: 10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
