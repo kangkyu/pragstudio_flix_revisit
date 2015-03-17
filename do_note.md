@@ -139,5 +139,7 @@ have_selector
 expect(page).to have_selector("img[src$='#{movie.image_file_name}']")
 
 Unable to find field "Cast"
-
+undefined method `cast' for #<Movie
+expected to find text "Robert Downey
+expected to find css "img[src$='ironman.jpg']" but there were no matches
 
