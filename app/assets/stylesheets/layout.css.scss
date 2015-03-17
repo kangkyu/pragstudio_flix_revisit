@@ -1,6 +1,4 @@
-$primary-color: #237CBE;
-$secondary-color: #F0F0F0;
-
+@import "colors";
 
 aside#sidebar {
   float: right; background: $primary-color; width: 200px;
