@@ -77,9 +77,9 @@ The action 'edit' could not be found for MoviesController
 Missing template movies/edit
 
 First argument in form cannot contain nil or be empty
+`find_field('Title').value`
 http://www.rubydoc.info/github/jnicklas/capybara/Capybara/Node/Finders:find_field
-Unable to find field "Title"
-
+Unable to find field "Title" 
 
 
 
