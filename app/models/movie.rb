@@ -4,6 +4,6 @@ class Movie < ActiveRecord::Base
   end
 
   def self.released 
-    where("released_on < ?", Date.today)
+    where("released_on < ?", Date.today).order("released_on desc")
   end
 end

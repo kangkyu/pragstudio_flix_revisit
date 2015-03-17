@@ -19,4 +19,12 @@ RSpec.describe Movie, type: :model do
     movie = Movie.create(movie_attributes(released_on: 3.months.from_now))
     expect(Movie.released).to_not include(movie)
   end
+
+  it "released - ordered with the most recently-released movie first" do
+    movie1 = Movie.create(movie_attributes(released_on: 2.months.ago))
+    movie2 = Movie.create(movie_attributes(released_on: 1.months.ago))
+    movie3 = Movie.create(movie_attributes(released_on: 3.months.ago))
+
+    expect(Movie.released).to eq([movie2, movie1, movie3])
+  end
 end
