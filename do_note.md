@@ -116,6 +116,11 @@ Missing template movies/destroy
 expected not to find text "Superman" in
 undefined method `destroy' for nil:NilClass
 
+###9
+expected not to find text "Superman" in
+undefined local variable or method `released_on' for #<MoviesController
+SQLite3::SQLException: no such column: Time.now
+http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html
 
 
 
