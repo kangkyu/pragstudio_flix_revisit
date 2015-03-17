@@ -43,3 +43,38 @@ Movie.create!([
     released_on: "2004-07-23"
   }
 ])
+
+movie = Movie.find_by(title: "Iron Man")
+movie.cast = "Robert Downey Jr., Gwyneth Paltrow and Terrence Howard"
+movie.director = "Jon Favreau"
+movie.duration = "126 min"
+movie.image_file_name = "ironman.jpg"
+movie.save
+
+movie = Movie.find_by(title: "Superman")
+movie.cast = "Christopher Reeve, Margot Kidder and Gene Hackman"
+movie.director = "Richard Donner"
+movie.duration = "143 min"
+movie.image_file_name = "superman.jpg"
+movie.save
+
+movie = Movie.find_by(title: "Spider-Man")
+movie.cast = "Tobey Maguire, Kirsten Dunst and Willem Dafoe"
+movie.director = "Sam Raimi"
+movie.duration = "121 min"
+movie.image_file_name = "spiderman.jpg"
+movie.save
+
+movie = Movie.find_by(title: "Batman vs. Godzilla")
+movie.cast = "Bruce Wayne, Gojira"
+movie.director = "Ishiro Honda"
+movie.duration = "211 min"
+movie.image_file_name = "batman-vs-godzilla.jpg"
+movie.save
+
+movie = Movie.find_by(title: "Catwoman")
+movie.cast = "Halle Berry, Sharon Stone and Benjamin Bratt"
+movie.director = "Jean-Christophe 'Pitof' Comar"
+movie.duration = "101 min"
+movie.image_file_name = "catwoman.jpg"
+movie.save
