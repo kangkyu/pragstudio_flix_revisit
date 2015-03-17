@@ -105,6 +105,17 @@ Missing template movies/create
 Cannot redirect to nil!
 undefined method `create' for nil:NilClass
 
+###8
+Unable to find link "Delete"
+undefined local variable or method `current_link' => 'current_path'
+       expected: "/movies"
+            got: "/movies/1"
+Couldn't find Movie with 'id'=:id
+The action 'destroy' could not be found for MoviesController
+Missing template movies/destroy
+expected not to find text "Superman" in
+undefined method `destroy' for nil:NilClass
+
 
 
 
