@@ -54,11 +54,12 @@ movies with a total gross less than $50M as flops
 spec/features/show_movie_spec.rb
 
 Failure/Error: movie = Movie.create(movie_attributes(total_gross: 10))
+undefined method `flop?'
 
+Failure/Error: expect(movie).to be_flop
+       expected #<Movie:0x007fdf417d6e00> to respond to `flop?`
 
-
-
-
+expected `#<Movie ...>.flop?` to return false, got true
 
 
 
