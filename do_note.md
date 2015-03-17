@@ -68,8 +68,12 @@ create a file named date_formats.rb in the config/initializers directory and cop
 
 Date::DATE_FORMATS[:default] = "%B %e, %Y"
 
-
-
+###6
+No route matches {:action=>"show", :controller=>"movies"} missing required keys: [:id]
+Unable to find link "Edit"
+undefined local variable or method `movie'
+undefined method `edit_movie_path'
+The action 'edit' could not be found for MoviesController
 
 
 
