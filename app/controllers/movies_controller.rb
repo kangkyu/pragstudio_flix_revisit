@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.where("released_on < ?", Date.today)
+    @movies = Movie.released
   end
 
   def show
