@@ -20,4 +20,8 @@ class Movie < ActiveRecord::Base
   validates :duration, presence: true
 
   has_many :reviews, dependent: :destroy
+
+  def average_stars
+    reviews.average(:stars)
+  end
 end

@@ -139,5 +139,14 @@ RSpec.describe Movie, type: :model do
 
     expect(movie.errors[:duration].any?).to eq(true)
   end
+
+  it "calculate number average of review stars" do
+    movie = Movie.create(movie_attributes)
+    movie.reviews.create(review_attributes(stars: 1))
+    movie.reviews.create(review_attributes(stars: 3))
+    movie.reviews.create(review_attributes(stars: 5))
+
+    expect(movie.average_stars).to eq(3)
+  end
 end
 
