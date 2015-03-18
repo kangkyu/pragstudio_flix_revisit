@@ -36,4 +36,77 @@ RSpec.describe Movie, type: :model do
 
     expect(Movie.recently_added).to eq([movie4, movie3, movie2])
   end
+
+  it "requires a title" do
+    movie = Movie.new(title: "")
+    movie.valid?  # populates errors
+
+    expect(movie.errors[:title].any?).to eq(true)
+  end
+
+  it "accepts a positive total gross" do
+    movie = Movie.new(total_gross: 10_000_000.00)
+    movie.valid?
+
+    expect(movie.errors[:total_gross].any?).not_to eq(true)
+  end
+
+  it "rejects a negative total gross" do
+    movie = Movie.new(total_gross: -10_000_000.00)
+    movie.valid?
+
+    expect(movie.errors[:total_gross].any?).to eq(true)
+  end
+
+  it "accepts properly formatted image file names" do
+    file_names = %w[e.png movie.png movie_.jpg movie-two.gif MOVIE.GIF]
+    file_names.each do |file_name|
+      movie = Movie.new(image_file_name: file_name)
+      movie.valid?
+      expect(movie.errors[:image_file_name].any?).not_to eq(true)
+    end
+  end
+
+  it "rejects improperly formatted image file names" do
+    file_names = %w[movie .jpg .png .gif movie.pdf movie_.doc]
+    file_names.each do |file_name|
+      movie = Movie.new(image_file_name: file_name)
+      movie.valid?
+      expect(movie.errors[:image_file_name].any?).to eq(true)
+    end
+  end
+
+  it "accepts if image_file_name blank" do
+    movie = Movie.new(image_file_name: "")
+    movie.valid?
+
+    expect(movie.errors[:image_file_name].any?).not_to eq(true)
+  end
+
+  it "accepts example attributes" do
+    movie = Movie.new(movie_attributes)
+    
+    expect(movie.valid?).to eq(true)
+  end
+
+  it "accepts any rating on the approved list" do
+    ratings = %w[G PG PG-13 R NC-17]
+    ratings.each do |rating|
+      movie = Movie.new(rating: rating)
+      movie.valid?
+
+      expect(movie.errors[:rating].any?).not_to eq(true)
+    end
+  end
+
+  it "rejects any rating not on the approved list" do
+    ratings = %w[R-13 G-17 PG-32]
+    ratings.each do |rating|
+      movie = Movie.new(rating: rating)
+      movie.valid?
+
+      expect(movie.errors[:rating].any?).to eq(true)
+    end
+  end
 end
+

@@ -152,3 +152,16 @@ Write a Custom Image Helper - image placeholder if no image_file_name
 <footer style="text-align: center; padding: 5px; color: #237CBE; background: #F0F0F0">
 <aside style="float: right; background: #F0F0F0; width: 200px;">
 <header style="padding: 5px; color: #F0F0F0; background: #237CBE;">
+
+###Stylesheets & New Design
+
+###
+  requires a title
+  accepts a positive total gross
+  rejects a negative total gross
+  accepts properly formatted image file names
+  rejects improperly formatted image file names
+  accepts if image_file_name blank
+  accepts example attributes
+  accepts any rating on the approved list
+  rejects any rating not on the approved list
