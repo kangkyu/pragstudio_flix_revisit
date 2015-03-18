@@ -156,12 +156,17 @@ Write a Custom Image Helper - image placeholder if no image_file_name
 ###Stylesheets & New Design
 
 ###
-  requires a title
-  accepts a positive total gross
-  rejects a negative total gross
-  accepts properly formatted image file names
-  rejects improperly formatted image file names
-  accepts if image_file_name blank
-  accepts example attributes
-  accepts any rating on the approved list
-  rejects any rating not on the approved list
+requires a title
+accepts a positive total gross
+rejects a negative total gross
+accepts properly formatted image file names
+rejects improperly formatted image file names
+accepts if image_file_name blank
+accepts example attributes
+accepts any rating on the approved list
+rejects any rating not on the approved list
+
+###
+"Movie successfully updated!"
+"Movie successfully created!"
+"Movie successfully deleted!"

@@ -17,6 +17,7 @@ RSpec.feature "Editing a Movie", type: :feature do
 
     expect(current_path).to eq(movie_path(movie))
     expect(page).to have_text('Updated Movie')
+    expect(page).to have_text("Movie successfully updated!")
   end
 
   it "does not update the movie if invalid" do
