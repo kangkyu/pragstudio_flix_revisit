@@ -108,5 +108,36 @@ RSpec.describe Movie, type: :model do
       expect(movie.errors[:rating].any?).to eq(true)
     end
   end
+  
+  it "requires a description" do
+    movie = Movie.new(description: "")
+    movie.valid?
+
+    expect(movie.errors[:description].any?).to eq(true)
+  end
+  it "requires a rating" do
+    movie = Movie.new(rating: "")
+    movie.valid?
+
+    expect(movie.errors[:rating].any?).to eq(true)
+  end
+  it "requires a released_on" do
+    movie = Movie.new(released_on: "")
+    movie.valid?
+
+    expect(movie.errors[:released_on].any?).to eq(true)
+  end
+  it "requires a total_gross" do
+    movie = Movie.new(total_gross: "")
+    movie.valid?
+
+    expect(movie.errors[:total_gross].any?).to eq(true)
+  end
+  it "requires a duration" do
+    movie = Movie.new(duration: "")
+    movie.valid?
+
+    expect(movie.errors[:duration].any?).to eq(true)
+  end
 end
 

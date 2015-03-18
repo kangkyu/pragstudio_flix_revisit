@@ -15,6 +15,9 @@ class Movie < ActiveRecord::Base
   }
   RATINGS = %w[G PG PG-13 R NC-17]
   validates :rating, inclusion: { in: RATINGS }
+  validates :description, presence: true
+  validates :released_on, presence: true
+  validates :duration, presence: true
 
   has_many :reviews
 end
