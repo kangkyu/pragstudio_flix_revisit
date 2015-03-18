@@ -39,7 +39,11 @@
       </li>
     </ol>
     <p>
-      <%= f.submit %>
+      <% if @movie.id.nil? %>
+        <%= f.submit 'Add Movie' %>
+      <% else %>
+        <%= f.submit %>
+      <% end %>
       <%= link_to "Cancel", movies_path, class: 'button' %>
     </p>
   </fieldset>
