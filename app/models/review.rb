@@ -4,4 +4,6 @@ class Review < ActiveRecord::Base
   validates :name, presence: true
   validates :stars, presence: true
   validates :comment, presence: true
+
+  validates :stars, inclusion: { in: 1..5 }
 end

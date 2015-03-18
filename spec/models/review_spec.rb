@@ -31,4 +31,24 @@ describe 'A review' do
 
     expect(review.errors[:comment].any?).to eq(true)
   end
+
+  it "accepts star values of 1 through 5" do
+    stars = [1,2,3,4,5]
+    stars.each do |star|
+      review = Review.new(stars: star)
+      review.valid?
+
+      expect(review.errors[:stars].any?).not_to eq(true)
+    end
+  end
+
+  it "rejects invalid star values" do
+    stars = [-1, 0, 6, 7]
+    stars.each do |star|
+      review = Review.new(stars: star)
+      review.valid?
+
+      expect(review.errors[:stars].any?).to eq(true)
+    end
+  end
 end
