@@ -11,3 +11,11 @@ def movie_attributes(overrides={})
     image_file_name: "ironman.jpg"
   }.merge(overrides)
 end
+
+def review_attributes
+  {
+    name: "John",
+    comment: "This movie I like.",
+    stars: 3
+  }
+end

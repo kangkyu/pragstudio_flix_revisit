@@ -174,3 +174,15 @@ does not update the movie if invalid
 "Movie successfully updated!"
 "Movie successfully created!"
 "Movie successfully deleted!"
+
+###One-to-Many Models
+uninitialized constant Review
+undefined local variable or method `review_attributes'
+Could not find table 'reviews'
+undefined method `reviews'
+
+
+
+
+
+
