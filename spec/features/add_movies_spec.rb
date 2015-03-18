@@ -7,8 +7,6 @@ RSpec.feature "adding a movie", type: :feature do
 
     expect(current_path).to eq(new_movie_path)
 
-    #
-
     fill_in "Title", with: "New Movie"
     fill_in "Description", with: "This movie came out yesterday, so I'm adding it to the list right now"
     fill_in "Rating", with: "PG-13"
@@ -30,7 +28,7 @@ RSpec.feature "adding a movie", type: :feature do
     visit new_movie_url
 
     expect {
-        click_button 'Add Movie'
+      click_button 'Add Movie'
     }.not_to change(Movie, :count)
 
     expect(current_path).to eq(movies_path)

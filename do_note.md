@@ -167,6 +167,10 @@ accepts any rating on the approved list
 rejects any rating not on the approved list
 
 ###
+does not save the movie if invalid
+does not update the movie if invalid
+
+###
 "Movie successfully updated!"
 "Movie successfully created!"
 "Movie successfully deleted!"
