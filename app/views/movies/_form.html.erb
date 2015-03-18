@@ -1,4 +1,7 @@
 <%= form_for @movie do |f| %>
+  <% if @movie.errors.any? %>
+    <%= 'error' %>
+  <% end %>
   <fieldset>
     <ol>
       <li class="required">
