@@ -19,5 +19,5 @@ class Movie < ActiveRecord::Base
   validates :released_on, presence: true
   validates :duration, presence: true
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 end
