@@ -179,7 +179,9 @@ does not update the movie if invalid
 uninitialized constant Review
 undefined local variable or method `review_attributes'
 Could not find table 'reviews'
+
 undefined method `reviews'
+
 
 
 
