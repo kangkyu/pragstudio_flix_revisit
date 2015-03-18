@@ -149,4 +149,3 @@ RSpec.describe Movie, type: :model do
     expect(movie.average_stars).to eq(3)
   end
 end
-

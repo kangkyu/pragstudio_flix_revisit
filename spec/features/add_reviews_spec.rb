@@ -15,5 +15,4 @@ describe 'Add Reviews' do
     expect(current_path).to eq(movie_reviews_path(movie))
     expect(page).to have_text("Thanks for your review!")
   end
-
 end

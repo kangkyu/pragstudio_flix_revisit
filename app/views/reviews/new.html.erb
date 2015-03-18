@@ -20,11 +20,7 @@
     </li>
   </ol>
     <p>
-      <% if @review.id.nil? %>
-        <%= f.submit 'Post Review' %>
-      <% else %>
-        <%= f.submit %>
-      <% end %>
+      <%= f.submit 'Post Review' %>
       <%= link_to "Cancel", @movie, class: 'button' %>
     </p>
 </fieldset>
