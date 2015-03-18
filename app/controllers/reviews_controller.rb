@@ -12,8 +12,11 @@ class ReviewsController < ApplicationController
   def create
     @movie = Movie.find(params[:movie_id])
     @review = @movie.reviews.new(review_params)
-    @review.save
-    redirect_to movie_reviews_path(@movie), notice: "Thanks for your review!"
+    if @review.save
+      redirect_to movie_reviews_path(@movie), notice: "Thanks for your review!"
+    else
+      render :new
+    end
   end
 
   private
