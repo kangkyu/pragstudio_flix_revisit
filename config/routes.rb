@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :reviews
 
   root "movies#index"
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
   # get 'movies', to: 'movies#index'
   # post 'movies', to: 'movies#create'
   # get 'movies/new', to: 'movies#new', as: 'new_movie'

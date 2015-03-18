@@ -12,10 +12,10 @@ def movie_attributes(overrides={})
   }.merge(overrides)
 end
 
-def review_attributes
+def review_attributes(overrides={})
   {
     name: "John",
     comment: "This movie I like.",
     stars: 3
-  }
+  }.merge(overrides)
 end
