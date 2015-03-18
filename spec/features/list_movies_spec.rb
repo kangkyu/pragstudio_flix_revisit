@@ -20,9 +20,7 @@ RSpec.feature "movies#index", type: :feature do
                           total_gross: 403706375.00,
                           description: "Peter Parker gets bit by a genetically modified spider",
                           released_on: "2002-05-03")
-
     visit movies_url
-    expect(page).to have_text("3 Movies")
 
     expect(page).to have_text(movie1.title)
     expect(page).to have_text(movie2.title)
@@ -30,7 +28,7 @@ RSpec.feature "movies#index", type: :feature do
 
     expect(page).to have_text(movie1.rating)
     expect(page).to have_text(movie1.description[0..10])
-    expect(page).to have_text(movie1.released_on)
+    expect(page).to have_text(movie1.released_on.year)
     expect(page).to have_text("$318,412,101.00")
   end
 

@@ -28,7 +28,7 @@ describe 'movies#show' do
   it "shows the total gross as flop if if less than $50M" do
     movie = Movie.create(movie_attributes(total_gross: 10))
     visit movie_url(movie)
-    expect(page).to have_text("flop")
+    expect(page).to have_text("Flop!")
   end
 
   it "shows the total gross if exceeds $50M" do
