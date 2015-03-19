@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to user_url(@user)
+    redirect_to user_url(@user), notice: "Thanks for signing up!"
   end
 
   private
