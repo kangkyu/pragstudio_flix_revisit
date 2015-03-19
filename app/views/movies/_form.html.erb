@@ -40,7 +40,7 @@
       </li>
     </ol>
     <p>
-      <% if @movie.id.nil? %>
+      <% if @movie.new_record? %>
         <%= f.submit 'Add Movie' %>
       <% else %>
         <%= f.submit %>
