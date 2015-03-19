@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :movies do
     resources :reviews, only: [:index, :create, :new]
   end
+
+  resources :users
 end

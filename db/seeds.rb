@@ -130,3 +130,24 @@ movie.reviews.create!([
     comment: "It's a bird, it's a plane, it's a blockbuster!"
   }
 ])
+  
+User.create!([
+  {
+    name: "Larry", 
+    email: "larry@example.com", 
+    password: "secret", 
+    password_confirmation: "secret"
+  },
+  {
+    name: "Moe", 
+    email: "moe@example.com", 
+    password: "secret", 
+    password_confirmation: "secret"
+  },
+  {
+    name: "Curly", 
+    email: "curly@example.com", 
+    password: "secret", 
+    password_confirmation: "secret"
+  }
+])
