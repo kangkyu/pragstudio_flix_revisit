@@ -11,4 +11,12 @@ RSpec.feature "ListUsers", type: :feature do
     expect(page).to have_link(user2.name)
     expect(page).to have_link(user3.name)
   end
+
+  it "leads to user detail page by the user name link" do
+    user1 = User.create!(user_attributes(name: "Larry", email: "larry@example.com"))
+    visit users_url
+    
+    click_link user1.name
+    expect(page).to have_text(user1.name)
+  end
 end
