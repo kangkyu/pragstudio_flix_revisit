@@ -17,4 +17,14 @@ RSpec.feature "EditUsers", type: :feature do
     expect(page).to have_text("Updated User")
     expect(page).to have_text("Account successfully updated!")
   end
+
+  it "doesn't update the user when invalid, gives error" do
+    user = User.create!(user_attributes)
+    visit edit_user_url(user)
+
+    fill_in 'Name', with: ""
+    click_button "Update"
+
+    expect(page).to have_text("error")
+  end
 end
