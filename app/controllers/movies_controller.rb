@@ -33,7 +33,7 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie.destroy
-    redirect_to movies_url, notice: "Movie successfully deleted!"
+    redirect_to movies_url, alert: "Movie successfully deleted!"
   end
   private
 
