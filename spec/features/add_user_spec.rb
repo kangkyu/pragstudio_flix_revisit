@@ -18,5 +18,13 @@ describe "Creating a new user" do
     expect(page).to have_text("Thanks for signing up!")
   end
 
-  it "does not save the user if it's invald, gives error instead"
+  it "does not save the user if it's invald, gives error instead" do
+    visit signup_url
+
+    expect {
+      click_button 'Register'
+    }.not_to change(User, :count)
+
+    expect(page).to have_text("error")
+  end
 end
